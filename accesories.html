@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Violence Records</title>
+        <link href="violencefavicon.png" rel="icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reglas.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body id="inicio">
+        <nav id="menu1" class="navbar navbar-expand-lg fixed-top menu-white1 linea-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="./home.html" tabindex="1"> 
+                    <img src="./imagenes/logoblack.png" alt="logo Violence records" class="img-fluid logo">                           
+                </a>                         
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" tabindex="2">
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2">
+                        <li class="nav-item" tabindex="3">
+                            <a class="nav-link optmenu" aria-current="page" href="./home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown"> <!--si quito el href del submenu no sale-->
+                            <a class="nav-link dropdown-toggle optmenu-drop" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" tabindex="4">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item optmenu1" href="./music.html" tabindex="5">Música</a></li>
+                                <li><a class="dropdown-item optmenu1" href="./merch.html" tabindex="6">Merch</a></li>
+                                <li><a class="dropdown-item optmenu1" href="./accesories.html" tabindex="7">Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">          
+                            <a class="nav-link optmenu" href="./aboutUs.html" tabindex="8">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link optmenu" href="./blog.html" tabindex="9">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link optmenu" href="./contact.html" tabindex="11">Contacto</a>
+                        </li>                                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="space1"></div>
+        <section class="container pt-5 pb-4 text-center">
+            <div class="container-fluid pt-5">
+                <h4 class="pb-2" tabindex="12">Accesorios</h4>
+                <h5 class="pt-5" tabindex="13">Los accesorios se actualizan según los artículos disponibles en inventario</h5>
+                <div class="row pt-5">
+                    <div class="col-md-3 col-lg-3 pb-5">
+                        <a class="thumb" tabindex="14">
+                            <div class="image-container">
+                                <img src="./imagenes/Toterojo-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de totebags color rojo disponibles">
+                            </div>
+                            <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal22">
+                                Agregar
+                            </button>    
+                        </a>    
+                        <h5 class="secondary-title pt-4" tabindex="15">Bolso "totebag" color rojo</h5>                       
+                        <p class="primary-text pb-4" tabindex="16">₡10000</p>                        
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal22" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModal22">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/Toterojo-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong> Bolso "totebag" color rojo</p>
+                                    <p><strong>Precio:</strong> ₡12000</p>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-md-3 col-lg-3 pb-5">
+                        <a class="thumb" tabindex="18">
+                            <div class="image-container">                     
+                                <img src="./imagenes/tote-negro-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de totebags color negro disponibles">
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal23">
+                                    Agregar
+                                </button>
+                            </div>  
+                        </a>      
+                        <h5 class="secondary-title pt-4" tabindex="19">Bolso "totebag" color negro</h5>
+                        <p class="primary-text pb-3" tabindex="20">₡10000</p>                     
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal23" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModal23">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/tote-negro-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong> Bolso "totebag" color negro</p>
+                                    <p><strong>Precio:</strong> ₡7000</p>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-md-3 col-lg-3 pb-5">
+                        <a class="thumb" tabindex="22">
+                            <div class="image-container">
+                                <img src="./imagenes/Stickers-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de stickers disponibles">                
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal24">
+                                    Agregar
+                                </button>
+                            </div>
+                        </a>    
+                        <h5 class="secondary-title pt-4" tabindex="23">Panel de stickers</h5>
+                        <p class="primary-text pb-4" tabindex="24">₡4000</p> 
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal24" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModal24">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/Stickers-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong> Panel de stickers</p>
+                                    <p><strong>Precio:</strong> ₡7000</p>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-md-3 col-lg-3">
+                        <a class="thumb" tabindex="26">
+                            <div class="image-container">
+                                <img src="./imagenes/Calendarios-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de calendarios 2024 disponibles">
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal25">
+                                    Agregar
+                                </button>
+                            </div>    
+                        </a>    
+                        <h5 class="secondary-title pt-4" tabindex="27">Calendarios 2024</h5>
+                        <p class="primary-text pb-4" tabindex="28">₡1500</p>
+                    </div>
+                </div>
+                <div class="space1"></div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 pb-5">
+                        <a class="thumb" tabindex="30">
+                            <div class="image-container">
+                                <img src="./imagenes/figuraVO-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de la figura del lanzamiento Ascension Beyond Kokytus disponible">
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal25">
+                                    Agregar
+                                </button>
+                            </div>
+                        </a>    
+                            <h5 class="secondary-title pt-4" tabindex="31">Figura VO</h5>                        
+                            <p class="primary-text pb-4" tabindex="32">₡4000</p>                        
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal25" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModalLabel25">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/figuraVO-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong> Figura VO </p>
+                                    <p><strong>Precio:</strong> ₡7000</p>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-md-4 col-lg-4 pb-5">
+                        <a class="thumb" tabindex="34">
+                            <div class="image-container">                      
+                                <img src="./imagenes/Figura GR-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de la figura del lanzamiento de la banda Goat Rider">
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal26">
+                                    Agregar
+                                </button>
+                            </div> 
+                        </a>      
+                        <h5 class="secondary-title pt-4" tabindex="35">Figura "armable" Goat incluida en el DEMO</h5>
+                        <p class="primary-text pb-4" tabindex="36">₡2500</p>                       
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal26" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModalLabel26">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/Figura GR-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong>Figura "armable" Goat incluida en el DEMO</p>
+                                    <p><strong>Precio:</strong> ₡7000</p>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-md-4 col-lg-4">
+                        <a class="thumb" tabindex="38">
+                            <div class="image-container">
+                                <img src="./imagenes/Bases-min.jpg" class="img-fluid pb-2 wow animate__animated animate__fadeInLeft see-more" alt="Imagen de bases para cassettes de Violence Records">                
+                                <button class="buttons" tabindex="18" data-bs-toggle="modal" data-bs-target="#productModal27">
+                                    Agregar
+                                </button>
+                            </div>    
+                        </a>    
+                        <h5 class="secondary-title pt-4" tabindex="39">Bases para cassette, disponibles en 3 variantes de color</h5>
+                        <p class="primary-text pb-4" tabindex="40">₡5500</p>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="productModal27" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModalLabel27">Producto Agregado al Carrito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Imagen dentro del modal -->
+                                    <img src="./imagenes/Bases-min.jpg" alt="Imagen del producto" class="img-fluid mb-3">
+                                    <p><strong>Nombre del producto:</strong> Bases para cassette, disponibles en 3 variantes de color</p>
+                                    <p><strong>Precio:</strong> ₡7000</p>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <label for="color" class="form-label me-2"><strong>Color:</strong></label>
+                                        <select class="form-select w-auto" id="color">
+                                            <option selected disabled>Seleccione un color</option>
+                                            <option value="rojo">Transparente</option>
+                                            <option value="azul">Gris-transparente</option>
+                                            <option value="verde">Negro</option>
+                                        </select>
+                                    </div>
+                                    <!-- Campo para seleccionar la cantidad -->
+                                    <div class="d-flex align-items-center">
+                                        <label for="quantity" class="me-2"><strong>Cantidad:</strong></label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-25">
+                                    </div>                                   
+                                    <!-- Botones dentro del modal -->
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                                Agregar al Carrito
+                                        </button>
+                                        <button class="btn btn-success">Comprar ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </section>
+        <a data-scroll id="flecha" class="goto-top" href="#inicio" title="Ir al inicio" onclick="topFunction()">
+            <img src="./imagenes/arrow.png" class="img-fluid" alt="flecha top">   
+        </a>
+        <div class="space1"></div>      
+        <footer class="container-fluid footer-background text-white pt-5 pb-5">
+            <div class="container pt-4">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-sm-12 pb-5">
+                        <h5 class="secondary-title text-white" tabindex="60">Sobre nosotros</h5>
+                        <div class="pt-4 pb-3">
+                            <p class="primary-text text-white" tabindex="61">Violence Records ofrece<br> material de música extrema<br> desde el 2019, manteniendo<br> la calidad de audio así como<br> en el aspecto visual en formato<br> cassette o "tape". </p>
+                        </div>
+                        <div class="pb-3">
+                            <img src="./imagenes/logowhite.png" alt="logo Violence Records" class="img-fluid logo-footer" tabindex="62">
+                        </div>                        
+                    </div>
+                    <div class="col-lg-4 col-sm-12 pb-5">
+                        <p>&copy; 2025 Violence Records. Todos los derechos reservados.</p>
+                        <a href="/politica-de-privacidad">Política de Privacidad</a> | 
+                        <a href="/terminos-y-condiciones">Términos y Condiciones</a>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 pb-5">
+                        <h5 class="secondary-title text-white pb-4" tabindex="73">Links Externos</h5>
+                        <div>  
+                            <a href="https://www.instagram.com/violence_recordscr/" target="_blank" tabindex="74">
+                                 <i class="fab fa-instagram icon-redes px-3" style="color:#fff"></i>
+                                 <span class="d-none">Instagram</span>                               
+                            </a>
+                            <a href="https://www.facebook.com/violencerecordscr?locale=es_LA" target="_blank" tabindex="75">
+                                <i class="fab fa-facebook icon-redes px-3" style="color:#fff; background:none;"></i>
+
+                                <span class="d-none">Facebook</span>
+                            </a>
+                            <a href="https://walink.co/e0ea8e" target="_blank" tabindex="76">
+                                <i class="fab fa-whatsapp icon-redes px-3" style="color:#fff"></i>
+                                <span class="d-none">WhatsApp</span>    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>                  
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://kit.fontawesome.com/6df3345e67.js" crossorigin="anonymous"></script>
+        <!--Requisito de cargar para esconder el boton scrolltop por medio de Jquery-->
+        <script src="./js/elastico.js"></script>
+        <script src="./js/galeria.js"></script>       
+        <!-- permite cambiar la velocidad y acelaracion usando JS -->       
+        <script src="./js/wow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js "></script>
+        <script>
+            new WOW().init();
+        </script> 
+        <script>
+            //no cambiar esta clase..la libreria la trae por defecto
+            baguetteBox.run('.tz-gallery');     
+        </script>
+    </body>
+</html>        
