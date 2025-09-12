@@ -1,0 +1,6 @@
+<h1>Nuestro sello ahora tiene nueva página web</h1>
+<p>¡Da click sobre el banner para que nos visites en nuestra página web!</p>
+<p>
+<a href="https://usuario4.vs2407.com/Proyecto" target="blank"> 
+<img  src="https://usuario4.vs2407.com/AnuncioVR/Anuncio.jpeg" alt="Anuncio página web"/> </a>
+</p>
