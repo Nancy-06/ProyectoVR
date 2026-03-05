@@ -1,0 +1,813 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+html, body{  font-family: 'Montserrat', sans-serif;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5{
+    font-size: 1.5em;
+    line-height: 1.2;
+    letter-spacing: .2em;
+    text-transform: uppercase ;
+    color:#1c1b1b;
+}
+p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+/*---BOTONES-----*/
+.btn-dark{
+    border: 1px solid #111;
+    display: inline-block;
+    background-color: #1c1b1b; /* Fondo transparente inicialmente */
+    color: #fff; /* Texto transparente inicialmente */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 14px 36px; /* Espaciado interno */
+    transition: all 0.3s ease;
+}
+.btn-dark:hover{
+    border: 1px solid #1c1b1b;
+    color: #1c1b1b;
+    background-color: #fff; /* Fondo transparente inicialmente */
+    transform: translateY(-2px);
+}
+.btn-transparent {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #111;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-transparent:hover {
+  background-color: #111;
+  color: #fff;
+}
+/* Estilo para los botones dentro del modal */
+.btn {
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    padding: 15px 0; /* Ajustar el espaciado del botón para que sea más alto */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    width: 100%; /* El botón ocupa el 100% del ancho */
+    border: 2px solid #1c1b1b; /* Borde negro por defecto */
+    border-radius: 0; /* Sin bordes redondeados, cuadrados */
+}
+/* Estilo para el botón 'Agregar Y enviar' */
+.btn-primary {
+    background-color: transparent; /* Fondo transparente */
+    color: #1c1b1b; /* Texto negro */
+    border-color: #1c1b1b; /* Borde negro */
+    margin-bottom: 15px; /* Espacio debajo del botón */
+    font-weight: bold; 
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+.btn-primary:hover {
+    background-color: #1c1b1b; /* Fondo negro al pasar el ratón */
+    color: white; /* Texto blanco al pasar el ratón */
+}
+/* Estilo para el botón 'Comprar ahora' */
+.btn-success {
+    background-color: #1a1a1a; /* Fondo negro */
+    color: white; /* Texto blanco */
+    border: 2px solid #1a1a1a; /* Borde negro */
+    margin-bottom: 15px; 
+}
+.btn-success:hover {
+    background-color: #333; /* Fondo más oscuro al pasar el ratón */
+    color: white; /* Mantener el texto blanco */
+}
+.subscribe-btn {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    color: #1c1b1b;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.subscribe-btn:hover {
+    background: #dcdcdc;
+    color: #1c1b1b;
+}
+/*-------------------------------------------------------*/
+.footer-title{
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: .2em;
+    text-transform: uppercase ;
+    color:#1c1b1b;
+}
+a{
+    text-decoration: none;
+}
+/* ========= POST HEADER NEGRO BLOG ========= */
+.post-header__title {
+  color: #fff;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 148px;
+  font-family: 'Lato', 'Montserrat', sans-serif;
+}
+.post-header {
+  position: relative;
+  background: #1c1b1b;
+  /* Más altura, como pediste */
+  padding: 120px 0 50px; /* top / bottom */
+  /* Asegura que nada externo lo recorte */
+  overflow: visible;
+  z-index: 0;
+}
+/* Contenedor centrado, independiente del .container de Bootstrap */
+.post-header__container {
+  max-width: 1100px;        /* ancho de contenido del título */
+  margin: 0 auto;
+  padding: 0 24px;          /* respiración lateral en mobile */
+  text-align: center;
+}
+/* ========= IMAGEN SOLAPADA ========= */
+.post-featured {
+  position: relative;
+  background: #fff;     /* mucho blanco como en Tighten */
+  z-index: 1;
+  /* Evitamos recortes si algún padre tiene overflow oculto */
+  overflow: visible;
+  padding-bottom: 48px; /* colchón debajo de la imagen */
+}
+/* La imagen sube hacia el header negro sin romper el flujo */
+.featured-img {
+  display: block;
+  width: 100%;
+  max-width: 950px;          /* ancho “editorial” */
+  margin: 0 auto;            /* centrada */
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.03);
+  transform: translateY(-120px); /* SOLAPAMIENTO HACIA ARRIBA */
+  will-change: transform;
+}
+/* Responsive: reduce solapamiento en pantallas chicas */
+@media (max-width: 576px) {
+  .post-header { padding: 100px 0 130px; }
+  .featured-img { max-width: 92%; transform: translateY(-80px); }
+}
+/* ========= COMPATIBILIDAD CON NAVBAR FIJO =========
+.navbar.fixed-top { z-index: 1040; }
+.post-header { z-index: 0; }
+.post-featured { z-index: 1; }
+
+/* ========= SANEAR HERENCIAS =========
+   Evita que estilos generales (como .overlay global o carousels)
+   afecten el header del post.
+*/
+.post-header .overlay,
+.post-featured .overlay { display: none !important; }
+/* Cambia el background del menu al mismo color de fondo de la pag al hacerle scroll */
+/* Fondo del menú al hacer scroll (aplicar 'menu-white1' al navbar vía JS/scroll) */
+.menu-white1 {
+  background-color: #fff;
+}
+/* ====== Navbar / Links ====== */
+.navbar { 
+  letter-spacing: 1.5px; 
+  font-size: 17px; 
+  color: #1c1b1b;     
+}
+/* Color de enlaces por defecto (sin scroll) */
+.navbar .nav-link {
+  color: rgb(248, 245, 245);
+}
+/* Color de enlaces cuando el navbar tiene fondo claro (con scroll) */
+.menu-white1 .nav-link {
+  color: rgb(15, 15, 15);
+}
+/* Enlaces del menú principal con subrayado animado al hover */
+.optmenu {
+  position: relative;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+.optmenu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.optmenu:hover::after {
+  width: 100%;
+}
+/* Evitar quiebres de línea en las opciones del menú */
+.navbar-nav .nav-link.optmenu {
+  white-space: nowrap;
+}
+/* ====== Dropdown ====== */
+.nav-item.dropdown {
+  position: relative; /* Contexto para el menú desplegable */
+}
+/* Quitar caret de Bootstrap en el toggle */
+.dropdown-toggle::after {
+  display: none !important;
+}
+/* Estilo del menú desplegable */
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  display: block;          /* Mantener control manual de visibilidad */
+  visibility: hidden;      /* Oculto por defecto; visible en hover (desktop) */
+}
+/* Items del dropdown */
+.dropdown-item {
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  transition: all 0.2s ease;
+}
+.dropdown-item:hover {
+  background: #dcdcdc;
+  padding-left: 28px;
+  color: #1c1b1b;
+}
+
+/* Evitar fondo azul y forzar color al seleccionar/focus */
+.dropdown-item:focus,
+.dropdown-item:active {
+  color: #1c1b1b !important;
+  background-color: transparent !important;
+}
+
+/* ====== Responsive (Desktop) ====== */
+@media (min-width: 992px) {
+  /* Mostrar dropdown con efecto al hover en desktop */
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    margin-top: 0; /* Evita salto visual al desplegar */
+  }
+}
+
+/* ====== Botón Hamburguesa (Navbar Toggler) ====== */
+.navbar-toggler {
+  background-color: #1c1b1b;
+  border: 3px solid #fff; 
+}
+
+/* Posición y borde del toggler personalizado */
+.custom-toggler.navbar-toggler {
+  border-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+/* Icono del toggler (líneas blancas) */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cline x1='2' y1='15' x2='28' y2='15' stroke='%23ffffff' stroke-width='3'/%3E%3Cline x1='2' y1='7' x2='28' y2='7' stroke='%23ffffff' stroke-width='3'/%3E%3Cline x1='2' y1='23' x2='28' y2='23' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E");
+}
+   
+/*style scrolltop*/
+/* Botón ir-arriba (limpio y visible solo cuando corresponde) */
+.goto-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 2000;               /* por encima de carruseles/overlays */
+  opacity: 0;                  /* oculto por defecto */
+  pointer-events: none;        /* no clickeable cuando está oculto */
+  transition: opacity .25s ease-in-out;
+}
+
+.goto-top img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.goto-top.goto-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+/*------------------------------*/
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+/*style del thumb de las imagenes*/
+.thumb {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+/* Efecto de hover para la imagen */
+.see-more{
+    transition: transform 0.5s ease-in-out; /* Hace que el zoom sea gradual */
+}
+.thumb .see-more{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.thumb:hover .see-more {
+    transform: scale(1.2);
+    overflow: hidden;
+}
+/* Estilos generales para el modal */
+.modal-content {
+    border-radius: 10px; /* Bordes redondeados del modal */
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+}
+.modal-header {
+    border-bottom: 2px solid #f0f0f0;
+}
+.modal-title {
+    font-weight: bold;
+}
+.modal-body {
+    text-align: left;
+}
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-close {
+    background: solid #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+/* Para los botones dentro del modal */
+.d-flex button {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+/*-----------------------------------------------------*/
+.banner-design {
+  background-image: url('../imagenes/bannerVR.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  box-shadow: inset 0 0 0 1000px rgba(26, 23, 23, 0.76);
+  height: 70vh;
+}
+
+.logo{
+     height: 40px;
+  width: auto;
+}
+.logo-footer{
+    width: 25%;
+}
+.space-between{
+    margin-top: 150px;
+}
+.division-line {
+    border-bottom: 1px solid #dddddd;
+    margin: -0.512em 0;
+    width: 100%;
+}
+/***Estilos del form contact****/
+.form-control1{
+    background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+    color: #474544;
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*****Estilos footer*****/
+.footer-background {
+    background: #1c1b1b;
+    color: #fff;
+}
+.footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+.logo-footer {
+    max-width: 160px;
+}
+.copyright {
+    font-size: 13px;
+    opacity: 0.6;
+}
+/* ICONOS */
+.icon-redes {
+    font-size: 26px;
+    color: #fff;
+    transition: 0.3s ease;
+    text-decoration: none !important;
+}
+.icon-redes:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+/***FORM SUBSCRIBE***/
+.subscribe-minimal {
+    max-width: 320px;
+    margin-left: auto;
+}
+.subscribe-input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #fff;
+    outline: none;
+    margin-bottom: 20px;
+}
+.subscribe-input::placeholder {
+    color: #777;
+}
+.privacy-text {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+/****ESTILOS figcaption*****/
+
+figure[class^="imghvr-fade"] figcaption,
+figure[class*=" imghvr-fade"] figcaption {
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+/* --- Base para todos los imghvr-* --- */
+figure[class^="imghvr-"],
+figure[class*=" imghvr-"] {
+  position: relative;
+  display: inline-block;   /* se respeta la base */
+  margin: 0;
+  max-width: 100%;
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+figure[class^="imghvr-"] > img,
+figure[class*=" imghvr-"] > img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+/* Figcaption común (posición y transición) */
+figure[class^="imghvr-"] figcaption,
+figure[class*=" imghvr-"] figcaption {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left = 0 */
+  padding: 30px;            /* igual que imagehover.css */
+  color: #fff;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* En hover: aparece y sube */
+figure[class^="imghvr-"]:hover figcaption,
+figure[class*=" imghvr-"]:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* imghvr-fade1: fondo específico */
+.imghvr-fade1 figcaption {
+  background-image: url('../imagenes/TapeGR-min.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.158);
+}
+
+/* imghvr-fade2: fondo específico */
+.imghvr-fade2 figcaption {
+  background-image: url('../imagenes/TapeMortual-min.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.158);
+}
+
+/* imghvr-fade3: fondo específico */
+.imghvr-fade3 figcaption {
+  background-image: url('../imagenes/TapeVoidO-min.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.158);
+}
+
+/* imghvr-fade4: fondo específico */
+.imghvr-fade4 figcaption {
+  background-image: url('../imagenes/TapeNoche-min.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.158);
+}
+
+/* imghvr-fade5: en tu archivo original tenía blend y color propios */
+.imghvr-fade5 figcaption {
+  /* puedes cambiar a una imagen si querés, por ahora mantiene el look de tu CSS */
+  background-color: rgba(14, 13, 13, 0.781);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+/* Opcional: pequeño zoom de la imagen al hacer hover (sutil y moderno) */
+figure[class^="imghvr-"]:hover > img,
+figure[class*=" imghvr-"]:hover > img {
+  transform: translate(0,0) scale(1.06);
+  transition: transform .45s ease;
+}
+
+/*****BANNER: altura + overlay + puntitos****/
+#carousel1 .carousel-item {
+  max-height: 60vh;
+}
+#carousel1 .carousel-item img.bannerstyle {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* Móvil: un poco más alto para que quepa el copy */
+@media (max-width: 768px) {
+  #carousel1 .carousel-item,
+  #carousel1 .carousel-item img.bannerstyle {
+    height: 60vh;
+    max-height: 60vh;
+  }
+}
+/* Overlay al frente, con oscurecimiento, alineado a la izquierda */
+#carousel1 .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* centra verticalmente */
+  align-items: flex-start; /* alinea a la izquierda */
+  padding-left: clamp(1.5rem, 6vw, 4rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  text-align: left;
+  color: #fff;
+  /* Fondo oscuro transparente para mejorar contraste */
+  background-blend-mode: multiply;
+  box-shadow: inset 0 0 0 1000px rgba(26, 23, 23, 0.813);
+  padding-bottom: 3rem;
+}
+/* Títulos compactos */
+#carousel1 .main-title,
+#carousel1 .title-banner {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+}
+/* Botón pequeño y con estilo independiente */
+.button-banner, #carousel1 .button-transparent {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #1c1b1b;
+  border: 1px solid #fff;
+  transition: all .25s ease;
+}
+.button-banner:hover {
+  background:transparent;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.button-banner:active {
+  transform: translateY(0);
+}
+/* Puntitos del carrusel */
+#carousel1 .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.45);
+  border: 1px solid rgba(255,255,255,.85);
+  margin: 0 6px;
+}
+#carousel1 .carousel-indicators .active {
+  background-color: #fff;
+  border-color: #fff;
+}
+#carousel1 .carousel-indicators {
+  bottom: 12px;
+}
+
+/*****NAVBAR: compactar alto + tipografía + logo *****/
+#menu1.navbar {
+  padding-top: .35rem;
+  padding-bottom: .35rem;
+  font-size: 0.95rem;
+}
+/* Links más compactos */
+#menu1 .nav-link {
+  padding: .35rem .6rem;
+  letter-spacing: 1px;
+}
+/* LOGO sin distorsión (muy importante) */
+#menu1 .navbar-brand .logo {
+  height: 70px;          
+  width: auto;           /* ← evita distorsión */
+  object-fit: contain;   /* asegura proporción */
+}
+/* Dropdown compacto */
+#menu1 .dropdown-menu .dropdown-item {
+  padding: .4rem .75rem;
+  font-size: .95rem;
+}
+/* Coherencia cuando el menú cambia al modo "menu-white1" */
+.menu-white1 .nav-link {
+  font-size: 0.95rem;
+}
+.linea-navbar {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* ====== CARD DEL PRODUCTO DESTACADO EN EL INDEX ====== */
+.producto-prox {
+  padding: 80px 20px;
+  text-align: center;
+}
+.producto-estado {
+  font-size: 14px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #1c1b1b;
+  margin-bottom: 50px;
+}
+.producto-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.producto-imagen img {
+  width: 420px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.producto-info {
+  text-align: left;
+  max-width: 420px;
+}
+.producto-titulo {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.producto-precio {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.producto-linea {
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.producto-btn {
+  width: 100%;
+  padding: 12px;
+  text-transform: uppercase;
+  border: 1px solid #1c1b1b;
+  background: transparent;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.producto-btn:hover {
+  background: #1c1b1b;
+  color: #fff;
+}
+.producto-btn-alt {
+  width: 100%;
+  padding: 12px;
+  background: #fff;  /* tono violeta similar al de tu ejemplo */
+  color: #1c1b1b;
+  font-weight: bold;
+  border: 1px solid #1c1b1b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.producto-btn-alt:hover {
+    background: #dcdcdc;
+    color: #1c1b1b;
+}
+.producto-descripcion {
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.producto-link{
+  font-size: 14px;
+  font-weight: 700;
+}
+.flecha-ir{
+   color: var(--text) !important;
+  }
+.flecha-ir:hover::after{
+   content: " →"; color: var(--text) !important; 
+}
+
+/*********Cards de design & serigrafia**************/
+.servicio-card {
+  padding: 20px;
+}
+.img-minimal {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 400px;
+}
+.servicio-text h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.servicio-text p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.carousel-indicators .active {
+  background-color: #111;
+}
+/********COTIZACION STYLES********/
+.contacto-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.contacto-section h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+.contacto-text {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/*******************************************/
+
